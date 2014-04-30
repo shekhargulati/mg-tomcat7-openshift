@@ -1,6 +1,7 @@
 ## Magnolia CMS on Tomcat 7 Running on OpenShift##
 
-To get Magnolia CMS 5.0.4 running on OpenShift run the command shown below.
+To get Magnolia CMS 5.2.4 version up and running on OpenShift run the command shown below.
+
 ```
-rhc create-app magnoliacms tomcat-7 --from-code https://github.com/shekhargulati/mg-5.0.4-tomcat7-openshift.git
+rhc app create magnoliacms tomcat-7 --from-code https://github.com/shekhargulati/magnoliacms-tomcat7-openshift.git
 ```
