@@ -1,0 +1,14 @@
+#!/bin/bash
+set -x
+
+cd $OPENSHIFT_DATA_DIR
+
+if [ -f $OPENSHIFT_DATA_DIR/ROOT.war ]
+then
+    cp ROOT.war $OPENSHIFT_REPO_DIR/webapps
+    exit 0
+else
+	wget http://downloads.sourceforge.net/project/magnolia/magnolia/Magnolia%20CE%205.2.4/magnolia-bundled-webapp-5.2.4.war
+	mv magnolia-bundled-webapp-5.2.4.war ROOT.war 
+	cp ROOT.war $OPENSHIFT_REPO_DIR/webapps
+fi
